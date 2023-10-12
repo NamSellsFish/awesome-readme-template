@@ -1,0 +1,6 @@
+FROM dockerfile/java:oracle-java8
+
+ADD DemoMavenProject.jar /opt/DemoMavenProject/
+EXPOSE 8080
+WORKDIR /opt/DemoMavenProject/
+CMD ["java", "-Xms512m", "-Xmx1g", "-jar", "DemoMavenProject.jar"]
